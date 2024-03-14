@@ -3,63 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
 <title>Rock Paper Scissors Game</title>
-<style>
-  body{
-    text-align: center;
-    background-color: #121212;
-  }
-
-  #rock, #paper, #scissors{
-    border: 1px solid blue;
-    width: 60px;
-    margin:10px;
-    padding: 5px;
-    border-radius: 50%;
-  }
-
-  #rock:hover, #paper:hover, #scissors:hover{
-    border: 3px solid black;
-  }
-  
-  .section{
-    margin:10px;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 20px;
-  }
-  
-  #computerSec{
-    background-color: lightcoral;
-    height: 70px;
-  }
-  
-  #playerSec{
-    background-color: lightblue;
-    height: 160px;
-  }
-  
-  #resultSec{
-    height: 80px;
-  }
-  
-  #result {
-    font-size: 70px;     
-    color: yellow;
-    font-weight: bolder;
-  }
-  
-  #playerChoice, #computerChoice {
-    font-size: 40px;
-    font-weight: bold;
-  }
-
-  h1{
-    color:yellow;
-  }
-  
-</style>
 </head>
+  
 <body>
 
 <h1>Rock - Paper - Scissors</h1>
@@ -87,46 +34,7 @@
     </div>
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const choices = ['rock', 'paper', 'scissors'];
-  const compDiv = document.getElementById('computerChoice');
-  const resultDiv = document.getElementById('result');
-
-  document.getElementById('rock').addEventListener('click', function() {
-    playRound('rock');
-  });
-  document.getElementById('paper').addEventListener('click', function() {
-    playRound('paper');
-  });
-  document.getElementById('scissors').addEventListener('click', function() {
-    playRound('scissors');
-  });
-
-  function playRound(playerChoice) {
-    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    document.getElementById('computerChoice').innerHTML=computerChoice.toUpperCase();  
-    document.getElementById('playerChoice').innerHTML=playerChoice.toUpperCase();
-
-    if (playerChoice === computerChoice) {
-        resultDiv.textContent = "It's a tie!";
-        document.getElementById("resultSec").style.backgroundColor='black';
-        // document.getElementById("result").style.color='yellow';
-    } else if ((playerChoice === 'rock' && computerChoice === 'scissors') ||
-               (playerChoice === 'paper' && computerChoice === 'rock') ||
-               (playerChoice === 'scissors' && computerChoice === 'paper')) {
-      resultDiv.textContent = `You win!`;
-        document.getElementById("resultSec").style.backgroundColor='green';
-        // document.getElementById("result").style.color='yellow';
-    } else {
-      resultDiv.textContent = `You lose!`;
-        document.getElementById("resultSec").style.backgroundColor='red';
-        // document.getElementById("result").style.color='yellow';
-    }
-  }
-  
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
