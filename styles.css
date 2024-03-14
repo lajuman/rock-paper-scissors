@@ -1,0 +1,52 @@
+  body{
+    text-align: center;
+    background-color: #121212;
+  }
+
+  #rock, #paper, #scissors{
+    border: 1px solid blue;
+    width: 60px;
+    margin:10px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  #rock:hover, #paper:hover, #scissors:hover{
+    border: 3px solid black;
+  }
+  
+  .section{
+    margin:10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  #computerSec{
+    background-color: lightcoral;
+    height: 70px;
+  }
+  
+  #playerSec{
+    background-color: lightblue;
+    height: 160px;
+  }
+  
+  #resultSec{
+    height: 80px;
+  }
+  
+  #result {
+    font-size: 70px;     
+    color: yellow;
+    font-weight: bolder;
+  }
+  
+  #playerChoice, #computerChoice {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  h1{
+    color:yellow;
+  }
